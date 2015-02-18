@@ -75,7 +75,7 @@ $(document).ready(function () {
                 50,
                 'linear'
             );
-            //$('#nav-bar-inner')
+
         }
         else if (height >= 16) {
 
@@ -107,6 +107,7 @@ $(document).ready(function () {
         }
         if (window.pageYOffset >= $('#start-Main').offset().top-120) {
             $('#nav-bar').slideDown(100);
+            $('#name-content').fadeOut(100);
         }
     }
 

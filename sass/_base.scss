@@ -119,6 +119,23 @@ body {
     position: relative;
     display: table;
 
+    #name-holder{
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        top: 40%;
+
+        #name-content{
+            margin: 0 auto;
+            width: 600px;
+            height: 90px;
+            text-align: center;
+            font-size: 400%;
+            font-family: $font-name;
+
+        }
+    }
+
     #pic-holder {
         width: 100%;
         height: 60px;
