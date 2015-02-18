@@ -1,18 +1,291 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MP1 Starter</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/gif" size="16x16">
+    <meta charset="UTF-8">
+    <title>MP1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
+
+<link rel="shortcut icon" href="images/favicon.ico"/>
+<div id="nav-bar">
+    <div id="nav-bar-inner">
+        <div class="menu-items">
+            <div id="title-space">
+                <div id="title">
+                    <a id="name" class="menu-button" href="#intro-screen"> Joel Holsteen</a>
+
+                    <div id="name-under" class="under-button"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul>
+                <!--<li class="menu-item">-->
+                <!--<a id="class-button" class="menu-button" href="#classes">Classes</a>-->
+
+                <!--<div id="class-under" class="under-button"></div>-->
+                <!--</li>-->
+                <!--<li class="menu-item">-->
+                <!--<a id="skills-button" class="menu-button" href="#skills">Skills</a>-->
+
+                <!--<div id="skills-under" class="under-button"></div>-->
+
+                <!--</li>-->
+                <li class="menu-item">
+                    <a id="experiences-button" class="menu-button" href="#experiences">Projects</a>
+
+                    <div id="experiences-under" class="under-button"></div>
+
+                </li>
+                <li class="menu-item">
+                    <a id="about-button" class="menu-button" href="#about-me">About Me</a>
+
+                    <div id="about-under" class="under-button"></div>
+
+                </li>
+                <li class="menu-item">
+                    <a id="home-button" class="menu-button" href="#home">Home</a>
+
+                    <div id="home-under" class="under-button"></div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="nav-sep"></div>
+</div>
 
 
-  <script src="lib/jquery-2.1.3.min/index.js"></script>
-  <script src="js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+<div id="intro-screen">
+    <div id="pic-holder">
+        <div id="inner-pic-holder">
+            <a id="chevron-down-link" class="slider-button" href="#home">
+                <img src="images/chevron-down.png" id="chevron-down-pic">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="start-Main">
+
+    <div id="home" class="color-bar">
+        <div class="home-content">
+            <div class="content-title">
+                <h1 id="title-text">
+                    A Quick Introduction
+                </h1>
+            </div>
+
+            <div class="home-inner" id="first-column">
+                <div id="illinois-pic-container">
+                    <img src="images/illinois.png" id="illinois-pic">
+                </div>
+            </div>
+            <div class="home-inner" id="second-column">
+                <div id="home-text-container">
+                    <div id="inner-text">
+                        <p class="content">My name is Joel Holsteen! I am a software developer that graduated from The
+                            University of
+                            Illinois in May 2015!</p>
+
+                        <p class="content">I am now working as a software engineer with Logrhythm Inc. in Boulder,
+                            CO.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-inner" id="third-column">
+                <div id="log-pic-container">
+                    <img src="images/logrhythmLogo.jpg" id="log-pic">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="about-me">
+        <div class="content-title">
+            <h1 class="content-title-text">
+                About Me
+            </h1>
+        </div>
+        <p class="content" id="about-me-content"> A little about me: <br> I am a Software Engineer who is always seeking
+            to learn something new and enjoys challenging my mind in new ways every day.</p>
+
+
+        <div class="one-column-outer" id="about-me-outer">
+            <div class="one-column-inner" id="about-me-inner">
+                <div id="carousel-outer">
+                    <div id="carousel-inner">
+                        <div id="carousel-content">
+                            <a id="here">
+                                <i class="fa fa-chevron-circle-left fa-2x" id="left-arrow"></i>
+                            </a>
+                            <ul id="carousel">
+                                <li class="image active" id="img-1">
+                                    <p class="on-image">I grew up and live in Colorado. I love the Mountains and the
+                                        Beauty!</p>
+                                    <img src="images/colorado_image.jpg">
+                                </li>
+                                <li class="image" id="img-2">
+                                    <p class="on-image">My favorite non programming activity is reading!</p>
+                                    <img src="images/reading_image.jpeg">
+                                </li>
+                                <li class="image" id="img-3">
+                                    <p class="on-image">I am a strong supporter of Linux and open source software!</p>
+                                    <img src="images/linux_logo.jpg">
+                                </li>
+                            </ul>
+                            <a id="right-arrow">
+                                <i class="fa fa-chevron-circle-right fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="experiences" class="color-bar">
+        <h1>Experiences</h1>
+
+        <div class="one-column-outer">
+            <div class="one-column-inner">
+                <div class="one-column-center">
+                    <p class="content">These are some of the projects that I have worked on:</p>
+
+                    <ul>
+                        <li>
+                            <p class="emphasis"> RealTime File Integrity Monitoring integration on Linux Systems</p>
+
+                            <p class="description-content content">
+                                I worked on implementing a real time file
+                                integrity monitor on both Debian and Solaris systems.
+                                This included significant work with autotools and
+                                optimizing a build for a test developement.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="emphasis">Caretakers Coordination Application</p>
+
+                            <p class="description-content content">
+                                I worked with a team of 6 developers to create an android
+                                to assist those caring for loved ones with cancer. I was primarily
+                                writing the server code in nodejs using the express framework.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="emphasis">Python Attendance Application</p>
+
+                            <p class="description-content content">
+                                As a challenge to myself and a favor to a relative, I created
+                                a python attendence keeper for teachers. It supports a whole graphic UI
+                                and is able to generate excel spreadsheet for records. I gained experience with
+                                tkinter as well as advanced python programming.
+                            </p>
+                        </li>
+                        <li>
+                            <!--<a href='#dialog' class="emphasis" id="modal">Python Attendance Application</a>-->
+                            <p class="emphasis">
+                                <a href="#dialog" class="emphasis" id="modal-button">CS 418 Computer Graphics</a>
+                            </p>
+
+                            <p class="description-content content">
+                                A cool assignment I did on spline curves and experimenting with manifold geometry
+                                implemented through Catmull-Clark algorithm. Click it to see the video!
+                            </p>
+                        </li>
+                        <li>
+                            <p class="emphasis">
+                                <a href="#resume-viewer" class="emphasis" id="pdf-button">My Full Resume</a>
+                            </p>
+
+                            <p class="description-content content">
+                                Click on the link to check out my full resume.
+                            </p>
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="resume-viewer">
+            <a href="#" class="close">
+                <i id="pdf-close" class="fa fa-times fa-5x"></i>
+            </a>
+            <iframe id="pdf-viewer" src="images/Resume.pdf"></iframe>
+        </div>
+
+
+        <div id="dialog">
+            <div class="dialog-title">
+                <p class="emphasis">Catmull-Clark subdivision on a b-spline curve!</p>
+                <a href="#" class="close">
+                    <i id="dialog-close" class="fa fa-times fa-2x"></i>
+                </a>
+            </div>
+            <div class="dialog-outer-body">
+                <div class="dialog-inner-body">
+                    <div class="dialog-center-body">
+                        <video width="600" height="440" controls>
+                            <source src="videos/spline.mov">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="back_modal"></div>
+    </div>
+
+
+</div>
+
+<div id="footer">
+    <div class="inner-footer">
+        <div class="social-link">
+            <ul>
+                <li class="social-list">
+                    <a class="social-link" href="http://www.facebook.com">
+                        <img class="social-image" id="facebook-front" src="images/Social_Icons/facebook.png">
+                    </a>
+                </li>
+                <li class="social-list">
+                    <a class="social-link" href="http://www.linkedin.com">
+                        <img class="social-image" src="images/Social_Icons/linkedin.png">
+                    </a>
+                </li>
+
+                <li class="social-list">
+                    <a class="social-link " href="http://www.github.com">
+                        <img class="social-image" src="images/Social_Icons/github.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="lib/jquery-2.1.3.min/index.js"></script>
+<script src="js/script.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
