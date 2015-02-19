@@ -211,6 +211,8 @@ $(document).ready(function () {
 
         $('body').css("overflow", "hidden");
         $('#nav-bar').css('z-index', '0');
+        $('.active').css('z-index', '-1');
+
         var modal_front = $(this).attr('href');
 
         $('#back_modal').css({
@@ -237,6 +239,8 @@ $(document).ready(function () {
         event.preventDefault();
         $('#back_modal, .modal-window').fadeOut(200);
         $('#nav-bar').css('z-index', '1');
+        $('.active').css('z-index', '0');
+
         $('body').css("overflow", '');
     }
 
