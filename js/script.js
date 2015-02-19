@@ -29,6 +29,7 @@ $(document).ready(function () {
     $(window).resize(changeBackModal);
 
 
+    //Slides the screen off the title page to the content
     function animate_slide(event) {
         event.preventDefault();
         $('#nav-bar').slideDown(180);
@@ -47,6 +48,7 @@ $(document).ready(function () {
             'swing');
     }
 
+    //Coloring for the menu buttons
     function colorBlue() {
         $(this).css("color", "#336699");
     }
@@ -56,6 +58,8 @@ $(document).ready(function () {
     }
 
 
+    //Smart resizing for the nav bar if you are not at top of the page
+    //Also hides the bar for the title screen
     function resizeNav() {
 
         var height = $(window).scrollTop();
@@ -109,6 +113,7 @@ $(document).ready(function () {
         }
     }
 
+    //Carousel arrows handler
     function click_arrow() {
         $(this).fadeTo(100, 0.5, function(){
             if($(this).is('#left-arrow')){
@@ -121,11 +126,18 @@ $(document).ready(function () {
         });
     }
 
+    //Left arrow function
     function change_slide_left(){
         var $carousel = $('#carousel');
         var $active = $('.active');
-        var $next = ($active.next().length) ? $active.next() : $carousel.children().first();
-
+        var $next;
+        if($active.next().length)
+        {
+            $next = $active.next();
+        }
+        else{
+            $next = $carousel.children().first();
+        }
 
         $next.css('z-index', $next.get('z-index') + 1);
         $next.fadeIn(1300);
@@ -137,11 +149,18 @@ $(document).ready(function () {
 
     }
 
+    //Right arrow function
     function change_slide_right(){
         var $carousel = $('#carousel');
         var $active = $('.active');
-        var $next = ($active.prev().length) ? $active.prev() : $carousel.children().last();
-
+        var $next;
+        if($active.prev().length)
+        {
+            $next = $active.prev();
+        }
+        else{
+            $next = $carousel.children().last();
+        }
         var $z_ind = $next.get('z-index');
         $next.css('z-index', $active.get('z-index'));
         $next.fadeIn(1300);
@@ -153,7 +172,7 @@ $(document).ready(function () {
 
     }
 
-
+    //Updates the position indicator in the menu bar
     function checkPosition(){
         var windowPos = window.pageYOffset;
         var intro =  $('#intro-screen');
@@ -186,15 +205,12 @@ $(document).ready(function () {
 
     }
 
-
-
+    //Opens a modal and freezes the screen
     function launchModal(event){
         event.preventDefault();
 
         $('body').css("overflow", "hidden");
-
         $('#nav-bar').css('z-index', '0');
-
         var modal_front = $(this).attr('href');
 
         $('#back_modal').css({
@@ -213,10 +229,10 @@ $(document).ready(function () {
             $(modal_front).css({top: '25%', left: '25%'});
         }
 
-
         $(modal_front).fadeIn(200);
     }
 
+    //Closes a modal and unfreezes the screen
     function closeModal(event){
         event.preventDefault();
         $('#back_modal, .modal-window').fadeOut(200);
@@ -224,6 +240,7 @@ $(document).ready(function () {
         $('body').css("overflow", '');
     }
 
+    //Resize function for the modal
     function changeBackModal(){
         $('#back_modal').css({height:$(document).height(), width: $(document).width()});
     }
