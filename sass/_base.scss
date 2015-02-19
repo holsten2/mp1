@@ -272,6 +272,9 @@ body {
         height: 85%;
         display: table;
         padding-bottom: 5%;
+        @-moz-document url-prefix() {
+            height: 50%;
+        }
 
         .one-column-inner {
             display: table-cell;
@@ -524,6 +527,8 @@ body {
 
                     .social-image:hover {
                         transform: scale(1.3);
+                        -moz-transform: scale(1.3);
+                        -webkit-transform: scale(1.3);
                         transition-duration: .3s;
 
                     }
