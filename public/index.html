@@ -70,7 +70,7 @@
     <div id="home" class="color-bar">
         <div class="home-content">
             <div class="content-title">
-                <h1 id="title-text">
+                <h1 class="content-title-text">
                     A Quick Introduction
                 </h1>
             </div>
@@ -149,62 +149,51 @@
 
 
     <div id="experiences" class="color-bar">
-        <h1>Experiences</h1>
+        <div class="content-title">
+            <h1 class="content-title-text">
+                Experience
+            </h1>
+        </div>
 
         <div class="one-column-outer">
             <div class="one-column-inner">
                 <div class="one-column-center">
-                    <p class="content">These are some of the projects that I have worked on:</p>
-
+                    <p class="content">These are some of the projects that I have worked on.<br> Click on them to see a brief description:</p>
                     <ul>
                         <li>
-                            <p class="emphasis"> RealTime File Integrity Monitoring integration on Linux Systems</p>
-
-                            <p class="description-content content">
-                                I worked on implementing a real time file
-                                integrity monitor on both Debian and Solaris systems.
-                                This included significant work with autotools and
-                                optimizing a build for a test developement.
-                            </p>
-                        </li>
-                        <li>
-                            <p class="emphasis">Caretakers Coordination Application</p>
-
-                            <p class="description-content content">
-                                I worked with a team of 6 developers to create an android
-                                to assist those caring for loved ones with cancer. I was primarily
-                                writing the server code in nodejs using the express framework.
-                            </p>
-                        </li>
-                        <li>
-                            <p class="emphasis">Python Attendance Application</p>
-
-                            <p class="description-content content">
-                                As a challenge to myself and a favor to a relative, I created
-                                a python attendence keeper for teachers. It supports a whole graphic UI
-                                and is able to generate excel spreadsheet for records. I gained experience with
-                                tkinter as well as advanced python programming.
-                            </p>
-                        </li>
-                        <li>
-                            <!--<a href='#dialog' class="emphasis" id="modal">Python Attendance Application</a>-->
                             <p class="emphasis">
-                                <a href="#dialog" class="emphasis" id="modal-button">CS 418 Computer Graphics</a>
+                                <a href="#rtfim-viewer" class=" launch-modal emphasis" id="rtfim-button">
+                                    RealTime File Integrity Monitoring integration on Linux Systems
+                                </a>
                             </p>
 
-                            <p class="description-content content">
-                                A cool assignment I did on spline curves and experimenting with manifold geometry
-                                implemented through Catmull-Clark algorithm. Click it to see the video!
+                        </li>
+                        <li>
+                            <p class="emphasis">
+                                <a href="#caretaker-viewer" class=" launch-modal emphasis" id="caretaker-button">
+                                    Caretakers Coordination Application
+                                </a>
                             </p>
                         </li>
                         <li>
                             <p class="emphasis">
-                                <a href="#resume-viewer" class="emphasis" id="pdf-button">My Full Resume</a>
+                                <a href="#attendance-viewer" class=" launch-modal emphasis" id="attendance-button">
+                                    Python Attendance Application
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="emphasis">
+                                <a href="#video-dialog" class="launch-modal emphasis" id="modal-button">CS 418 Computer
+                                    Graphics</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="emphasis">
+                                <a href="#resume-viewer" class="launch-modal emphasis" id="pdf-button">My Full
+                                    Resume</a>
                             </p>
 
-                            <p class="description-content content">
-                                Click on the link to check out my full resume.
-                            </p>
                         </li>
 
 
@@ -216,8 +205,72 @@
 
         </div>
 
+        <div class="modal-window" id="attendance-viewer">
+            <div class="dialog-title">
+                <p class="emphasis">Python Attendance Application</p>
+                <a href="#" class="close">
+                    <i class="dialog-close fa fa-times fa-2x"></i>
+                </a>
+            </div>
+            <div class="dialog-outer-body">
+                <div class="dialog-inner-body">
+                    <div class="dialog-center-body">
+                        <p class="description-content content">
+                            As a challenge to myself and a favor to a relative, I created
+                            a python attendence keeper for teachers. It supports a whole graphic UI
+                            and is able to generate excel spreadsheet for records. I gained experience with
+                            tkinter as well as advanced python programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div id="resume-viewer">
+
+        <div class="modal-window" id="caretaker-viewer">
+            <div class="dialog-title">
+                <p class="emphasis">Caretakers Application</p>
+                <a href="#" class="close">
+                    <i class="dialog-close fa fa-times fa-2x"></i>
+                </a>
+            </div>
+            <div class="dialog-outer-body">
+                <div class="dialog-inner-body">
+                    <div class="dialog-center-body">
+                        <p class="description-content content">
+                            I worked with a team of 6 developers to create an android
+                            to assist those caring for loved ones with cancer. I was primarily
+                            writing the server code in nodejs using the express framework.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-window" id="rtfim-viewer">
+            <div class="dialog-title">
+                <p class="emphasis">Real Time File Integrity Monitoring</p>
+                <a href="#" class="close">
+                    <i class="dialog-close fa fa-times fa-2x"></i>
+                </a>
+            </div>
+            <div class="dialog-outer-body">
+                <div class="dialog-inner-body">
+                    <div class="dialog-center-body">
+                        <p class="description-content content">
+                            I worked on implementing a real time file
+                            integrity monitor on both Debian and Solaris systems.
+                            This included significant work with autotools and
+                            optimizing a build for a test developement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-window" id="resume-viewer">
             <a href="#" class="close">
                 <i id="pdf-close" class="fa fa-times fa-5x"></i>
             </a>
@@ -225,20 +278,24 @@
         </div>
 
 
-        <div id="dialog">
+        <div class="modal-window" id="video-dialog">
             <div class="dialog-title">
                 <p class="emphasis">Catmull-Clark subdivision on a b-spline curve!</p>
                 <a href="#" class="close">
-                    <i id="dialog-close" class="fa fa-times fa-2x"></i>
+                    <i class="dialog-close fa fa-times fa-2x"></i>
                 </a>
             </div>
             <div class="dialog-outer-body">
                 <div class="dialog-inner-body">
-                    <div class="dialog-center-body">
-                        <video width="600" height="440" controls>
+                    <div class="dialog-center-body" id="video-container">
+                        <video id="modal-video" controls>
                             <source src="videos/spline.mov">
                             Your browser does not support the video tag.
                         </video>
+                        <p class="description-content content">
+                            A cool assignment I did on spline curves and experimenting with manifold geometry
+                            implemented through Catmull-Clark algorithm. Click it to see the video!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -255,18 +312,18 @@
         <div class="social-link">
             <ul>
                 <li class="social-list">
-                    <a class="social-link" href="http://www.facebook.com">
+                    <a class="social-link" href="https://www.facebook.com/joel.holsteen">
                         <img class="social-image" id="facebook-front" src="images/Social_Icons/facebook.png">
                     </a>
                 </li>
                 <li class="social-list">
-                    <a class="social-link" href="http://www.linkedin.com">
+                    <a class="social-link" href="https://www.linkedin.com/in/joelholsteen">
                         <img class="social-image" src="images/Social_Icons/linkedin.png">
                     </a>
                 </li>
 
                 <li class="social-list">
-                    <a class="social-link " href="http://www.github.com">
+                    <a class="social-link " href="http://www.github.com/holsten2">
                         <img class="social-image" src="images/Social_Icons/github.png">
                     </a>
                 </li>

@@ -22,9 +22,7 @@ $(document).ready(function () {
     $("#right-arrow")
         .bind('click', click_arrow);
 
-    $('a[id=modal-button]').click(launchModal);
-
-    $('a[id=pdf-button]').click(launchModal);
+    $('.launch-modal').click(launchModal);
 
     $('.close').click(closeModal);
 
@@ -162,8 +160,6 @@ $(document).ready(function () {
         var home =  $('#home');
         var about =  $('#about-me');
         var experiences =  $('#experiences');
-        var skills =  $('#skills');
-        var classes =  $('#classes');
         var name = $('#name');
 
 
@@ -171,8 +167,6 @@ $(document).ready(function () {
         var homePos = home.position().top + home.height()-100;
         var aboutPos = about.position().top + about.height()-100;
         var experPos = experiences.position().top + experiences.height()-100;
-        var skillsPos = skills.position().top + skills.height()-100;
-        var classesPos = classes.position().top + classes.height()-100;
 
         $('.under-button').removeClass('active-nav');
         name.css('color','');
@@ -189,12 +183,6 @@ $(document).ready(function () {
         else if(windowPos < experPos){
             $('#experiences-under').addClass('active-nav');
         }
-        else if(windowPos < skillsPos){
-            $('#skills-under').addClass('active-nav');
-        }
-        else if(windowPos < classesPos){
-            $('#class-under').addClass('active-nav');
-        }
 
     }
 
@@ -203,33 +191,37 @@ $(document).ready(function () {
     function launchModal(event){
         event.preventDefault();
 
-        $('body').css('overflow', 'hidden');
+        $('body').css("overflow", "hidden");
+
         $('#nav-bar').css('z-index', '0');
 
         var modal_front = $(this).attr('href');
 
         $('#back_modal').css({
             position: 'absolute',
-            height:$(document).height(), width: $(document).width(), top:'400px',
-            opacity: 0.8}).fadeIn(1000);
+            height:$(document).height(), width: $(document).width()-2, top:'400px',
+            opacity: 0.8}).fadeIn(200);
 
 
-        if($(modal_front).is('#dialog')) {
-            $(modal_front).css({top: '25%', left: '25%'});
-        }
-        else{
+        if($(modal_front).is('#resume-viewer')) {
             $(modal_front).css({top: '0%', left: '0%'});
         }
+        else if ($(modal_front).is('#video-dialog')){
+            $(modal_front).css({top: '15%', left: '25%'});
+        }
+        else{
+            $(modal_front).css({top: '25%', left: '25%'});
+        }
 
 
-        $(modal_front).fadeIn(2000);
+        $(modal_front).fadeIn(200);
     }
 
     function closeModal(event){
         event.preventDefault();
-        $('#back_modal, #dialog, #resume-viewer').fadeOut();
+        $('#back_modal, .modal-window').fadeOut(200);
         $('#nav-bar').css('z-index', '1');
-        $('body').css('overflow', '');
+        $('body').css("overflow", '');
     }
 
     function changeBackModal(){
