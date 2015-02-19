@@ -9,6 +9,11 @@ $(document).ready(function () {
         .bind('click', animate_slide)
         .bind('click', closeModal); //Note that this is an intentional feature not a bug!
 
+    $('.launch-modal')
+        .bind('mouseenter', colorBlack)
+        .bind('mouseleave', colorBlue)
+        .bind('click', launchModal);
+
     $(".slider-button")
         .bind('click', animate_slide);
 
@@ -21,8 +26,6 @@ $(document).ready(function () {
 
     $("#right-arrow")
         .bind('click', click_arrow);
-
-    $('.launch-modal').click(launchModal);
 
     $('.close').click(closeModal);
 
